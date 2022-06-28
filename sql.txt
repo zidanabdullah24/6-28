@@ -1,0 +1,25 @@
+create table Employee(
+employee_id int primary key,
+employee_firstName varchar(20),
+employee_lastName varchar(20),
+employee_salary int,
+employee_position varchar(25)
+);
+
+insert into employee values(5, 'jane', 'doe', 1000, 'unknown', 'main street');
+
+select * from employee;
+
+update employee set employee_lastName = 'dawn' where employee_id = 5;
+
+update employee set employee_id = 51 where employee_id = 1;
+
+delete from employee where employee_salary = 1000; 
+
+delete from employee where employee_firstname  = 'andy'; 
+
+alter table employee add column address varchar(50);
+
+update employee set address = 'elm street' where employee_id = 51;
+
+select employee_firstName from employee where employee_id = 51;
